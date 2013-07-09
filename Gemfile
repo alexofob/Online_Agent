@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate'
+gem 'jquery-rails', '2.0.2'
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
@@ -22,8 +23,6 @@ group :assets do
   gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '2.0.2'
-
 group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-notifu', '0.0.4'
@@ -32,4 +31,8 @@ group :test do
   gem 'factory_girl_rails', '4.1.0'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
 end
