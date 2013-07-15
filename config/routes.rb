@@ -1,9 +1,11 @@
 OnlineAgent::Application.routes.draw do
-  get "static_pages/home"
+  get "users/new"
 
-  get "static_pages/about"
-
-  get "static_pages/contact"
+  root to: 'static_pages#home'
+  match '/signup',          to: 'users#new'
+  match '/how_it_works',    to: 'static_pages#how_it_works'
+  match '/about',           to: 'static_pages#about'
+  match '/contact',         to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
