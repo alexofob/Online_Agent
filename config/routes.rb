@@ -1,6 +1,5 @@
 OnlineAgent::Application.routes.draw do
-  get "users/new"
-
+  resources :users
   root to: 'static_pages#home'
   match '/signup',          to: 'users#new'
   match '/how_it_works',    to: 'static_pages#how_it_works'
